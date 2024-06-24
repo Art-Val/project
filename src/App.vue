@@ -93,7 +93,9 @@
     </div>
     <div class="block-5">
       <h2>Галерея</h2>
-      <Carousel></Carousel>
+      <Carousel>
+        <img src="./assets/drone-gallery-4.jpg" alt="">
+      </Carousel>
     </div>
     <div class="footer" id="section2">
       <div class="f-con">

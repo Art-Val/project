@@ -1,9 +1,7 @@
 <template>
   <Carousel>
-    <Slide v-for="slide in slides" :key="slide">
-      <div class="carousel__item">
-        <img :src="slide"/>
-      </div>
+    <Slide v-for="slide in 5" :key="slide">
+      <div class="carousel__item"></div>
     </Slide>
 
     <template #addons>
@@ -18,6 +16,7 @@ import { defineComponent } from 'vue'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
+
 export default defineComponent({
   name: 'Basic',
   components: {
@@ -26,16 +25,6 @@ export default defineComponent({
     Pagination,
     Navigation,
   },
-  data: () => ({
-    slides: [
-        '../assets/drone-gallery-2.png',
-        '../assets/drone-gallery-3.png',
-        '../assets/drone-gallery-4.jpg',
-        '../assets/drone-gallery-4.jpg',
-        '../assets/drone-gallery-4.jpg',
-        '../assets/drone-gallery-4.jpg',
-    ],
-  }),
 })
 
 </script>
@@ -44,15 +33,16 @@ export default defineComponent({
 .carousel__item {
   min-height: 800px;
   width: 100%;
-  background-color: gray;
+  background-image: url(../assets/drone-gallery-5.png);
   background-size: 100% 100%;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   color: black;
   font-size: 20px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
 }
 
 .carousel__slide {
