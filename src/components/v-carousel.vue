@@ -1,7 +1,9 @@
 <template>
   <Carousel>
-    <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item"></div>
+    <Slide v-for="slide in slides" :key="slide">
+      <div class="carousel__item">
+        <img :src="slide"/>
+      </div>
     </Slide>
 
     <template #addons>
@@ -24,6 +26,16 @@ export default defineComponent({
     Pagination,
     Navigation,
   },
+  data: () => ({
+    slides: [
+        '../assets/drone-gallery-2.png',
+        '../assets/drone-gallery-3.png',
+        '../assets/drone-gallery-4.jpg',
+        '../assets/drone-gallery-4.jpg',
+        '../assets/drone-gallery-4.jpg',
+        '../assets/drone-gallery-4.jpg',
+    ],
+  }),
 })
 
 </script>
@@ -32,7 +44,7 @@ export default defineComponent({
 .carousel__item {
   min-height: 800px;
   width: 100%;
-  background-image: url('../assets/drone-gallery-3.png');
+  background-color: gray;
   background-size: 100% 100%;
   background-repeat: no-repeat ;
   color: black;
@@ -46,6 +58,7 @@ export default defineComponent({
 .carousel__slide {
   padding: 10px;
 }
+
 
 .carousel__prev,
 .carousel__next {

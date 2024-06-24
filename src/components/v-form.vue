@@ -6,7 +6,7 @@
             <li><input type="email" name="email"  v-model="email" placeholder="Укажите email"/></li>
             <li><input type="tel" name="tel" v-model="tel" maxlength="10" placeholder="+7"/></li>
             <li><textarea name="message" v-model="message" placeholder="Напишите Ваш вопрос"></textarea></li>
-            <li><button type="submit">Отправить</button></li>
+            <li><button type="submit" :disabled="!tel">Отправить</button></li>
         </ul>
     </form>
 </template>
@@ -91,7 +91,7 @@
     transition: 0.4s;
   }
 
-  .form-ul button:hover{
+  .form-ul button:disabled{
     background: transparent;
   }
 </style>
